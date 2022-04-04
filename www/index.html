@@ -6,21 +6,25 @@
   <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
   <script src="components/loader.js"></script>
   <script src="lib/onsenui/js/onsenui.min.js"></script>
-
   <link rel="stylesheet" href="components/loader.css">
   <link rel="stylesheet" href="css/style.css">
-
 </head>
 <body>
-    <main>
-        <form>
-            <input type= "text" id="name" name="name" placeholder="Digite seu nome"></input><br>
-            <input type= "button" class="button" name="entrar" value="Entrar" onclick="Mostar();"></input><br><br>
-            <input type= "number" name="idade" id="IdadeHtml" placeholder="Digite sua idade"></input><br>
-            <input type= "button" class="button" name="verificar" onclick="MostraIdade();" value="Verificar"></input><br><br>
-        </form>    
-
-        <input type= "button" class="button" name="sair" onclick="Sair();" value="Sair"></input><br>
+    <main class="main">
+        <div class="container">
+            <div class="box">
+                    <h2>Plugins</h2>
+                <div class="inputs">             
+                    <form>
+                        <input type= "text" id="name" name="name" placeholder="Digite seu nome"></input>
+                        <input type= "button" class="button" name="entrar" value="Entrar" onclick="Mostar();"></input>
+                        <input type= "number" name="idade" id="IdadeHtml" placeholder="Digite sua idade"></input>
+                        <input type= "button" class="button" name="verificar" onclick="MostraIdade();" value="Verificar"></input>
+                    </form>    
+                    <input type= "button" class="button" name="sair" onclick="Sair();" value="Sair"></input>
+                </div>
+            </div>
+        </div>
     </main>
 
 <script>
@@ -55,7 +59,7 @@ function MostraIdade(){
     'Qual seu sexo?', // message
      onConfirm,            // callback to invoke with index of button pressed
     'Alerta',           // title
-    ['Homem','Mulher']     // buttonLabels
+    ['Homem','Mulher']    
 );
     }
 }
